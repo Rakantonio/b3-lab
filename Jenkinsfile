@@ -1,8 +1,10 @@
 pipeline {
     agent { dockerfile false }
-    stage('run-services') {
-        steps {
-            sh './run.sh'
-        }
+    stages {
+        stage('Run') {
+            steps {
+                sh './run.sh'
+            }
+        }  
     }
 }
