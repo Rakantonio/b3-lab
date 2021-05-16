@@ -1,5 +1,7 @@
 pipeline {
-    agent { dockerfile true }
+    agent {
+        docker { image 'grafana/grafana' }
+     }
     stages {
         stage('Run') {
             steps {
