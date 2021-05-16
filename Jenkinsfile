@@ -3,7 +3,6 @@ pipeline {
     stage('run-services') {
         steps {
             sh './run.sh'
-            }
         }
     }
 }
