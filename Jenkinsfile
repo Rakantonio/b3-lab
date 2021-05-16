@@ -1,5 +1,4 @@
 pipeline {
-    agent { dockerfile false }
     stages {
         stage('Run') {
             steps {
