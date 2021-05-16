@@ -2,6 +2,6 @@
 
 WORKDIR=$PWD
 CMD=docker-compose
-sudo $CMD down --remove-orphans
-sudo $CMD --project-directory $WORKDIR \
+$CMD down --remove-orphans
+$CMD --project-directory $WORKDIR \
  	up -d
