@@ -38,5 +38,4 @@ services:
     restart: unless-stopped
     environment:
       - GF_INSTALL_PLUGINS=grafana-clock-panel
-      - GF_INSTALL_PLUGINS=sni-thruk-datasource
 
