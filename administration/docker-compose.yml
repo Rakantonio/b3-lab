@@ -2,10 +2,15 @@
 #########SERVICES#############
 ##############################
 
-services:    
+services:
+  portainer:
+    extends:
+      file: administration.yml
+      service: portainer
+     
   jenkins:
     extends:
-      file: jenkins.yml
+      file: administration.yml
       service: jenkins
 
 ##############################
@@ -13,6 +18,8 @@ services:
 ############################## 
 
 volumes:
+  portainer_data:
+    external: true
   jenkins_data:
     external: true
 
@@ -21,11 +28,10 @@ volumes:
 ##############################
 
 networks:
-  jenkins-net:
+  admin-net:     
     driver: bridge
     ipam:
       driver: default
       config:
-        - subnet: "172.28.50.0/24"
-          gateway: "172.28.50.1"
-
+        - subnet: "172.28.10.0/24"
+          gateway: "172.28.10.1"
